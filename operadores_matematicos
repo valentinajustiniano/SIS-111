@@ -1,0 +1,34 @@
+
+#crear variables 
+saludo = "Hola Mundo!!!" 
+print(saludo)
+
+#suma 
+num1 = 10
+num2 = 20 
+suma = num1 + num2
+print(suma)
+
+#resta 
+num3 = 9 
+num4 = 3
+resta = num3 - num4
+print(resta)
+
+#multiplicacion 
+num5 = 10 
+num6 = 5 
+multiplicacion = num5 * num6 
+print(resta)
+
+#division 
+num7 = 40 
+num8 = 8
+division = num7 / num8
+print(division)
+
+#division exacta 
+num9 = 50 
+num10 = 5 
+division = num9 // num10 
+print(division)
