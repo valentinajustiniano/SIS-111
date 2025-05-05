@@ -1,0 +1,163 @@
+#1. Sequence Order Verifier 
+print("Introduce 5 números enteros:")
+numeros = [int(input(f"Número {i+1}: ")) for i in range(5)]
+
+if numeros == sorted(numeros):
+    print("Orden ascendete")
+elif numeros == sorted(numeros, reverse=True):
+    print("Orden descendente")
+else:
+    print("Orden aleatorio")
+
+
+
+#2. Element Search
+numeros = list(map(int, input("Introduce una lista de números separados con espacios").split()))
+objetivo = int(input("Introduce el número que desea buscar: "))
+
+encontrado = False
+for num in numeros:
+    if num == objetivo:
+        encontrado = True
+        break
+
+if encontrado:
+    print("Número encontrado")
+else:
+    print("Número no encontrado")
+
+
+
+#3. Count of Even and Odd Digits
+numero = int(input("Introduce un número entero: "))
+pares = impares = 0
+
+while numero > 0:
+    digito = numero % 10
+    if digito % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+    numero //= 10
+
+print(f"Dígitos pares: {pares}, Dígitos impares: {impares}")
+
+
+
+#4. Team Performance Comparator
+equipo_a = list(map(float, input("Resultados del equipo A (5 valores): ").split()))
+equipo_b = list(map(float, input("Resultados del equipo B (5 valores): ").split()))
+
+media_a = sum(equipo_a) / len(equipo_a)
+media_b = sum(equipo_b) / len(equipo_b)
+
+if media_a > media_b:
+    print("El equipo A tuvo mejor rendimiento")
+elif media_b > media_a:
+    print("El equipo B tuvo mejor rendimiento")
+else:
+    print("Ambos equipos tuvieron el mismo rendimiento")
+
+
+
+#5. Largest Product Between Two Numbers
+from itertools import combinations
+
+numeros = list(map(int, input("Introduce 4 números separados por espacio: ").split()))
+mayor_producto = float('-inf')
+
+for a, b in combinations(numeros, 2):
+    producto = a * b
+    if producto > mayor_producto:
+        mayor_producto = producto
+
+print(f"Mayor producto: {mayor_producto}")
+
+
+
+#6. Days to Reach a Savings Goal 
+meta = float(input("Introduce la cantidad de dinero meta: "))
+ahorrado = 0
+dia = 0
+ahorro_diario = 5
+
+while ahorrado < meta:
+    ahorrado += ahorro_diario
+    ahorro_diario += 2
+    dia += 1
+
+print(f"Meta alcanzada en {dia} días")
+
+
+
+#7. Palidrome Number
+numero = input("Introduce un número entero: ")
+
+if numero == numero[::-1]:
+    print("Es un número palíndromo")
+else:
+    print("No es un número palíndromo")
+
+
+
+#8. Two Number Combinations
+from itertools import combinations
+
+numeros = list(map(int, input("Introduce 4 números separados por espacio: ").split()))
+pares = list(combinations(numeros, 2))
+
+print("Combinaciones posibles sin repetición:")
+for par in pares:
+    print(par)
+
+
+
+#9. Prime Number Verifier 
+import math
+
+def es_primo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, int(math.sqrt(numero)) +1):
+        if numero % i == 0:
+            return False
+        return True
+
+numero = int(input("Ingresa un número entero: "))
+
+if es_primo(numero):
+    print("Es un número primo")
+else:
+    print("No es un número primo")
+
+
+
+#10. Sum of Even Elements
+def suma_pares(lista):
+    suma = 0
+    for numero in lista:
+        if numero % 2 == 0:
+            suma += numero
+    return suma
+    
+
+entrada = input("Ingresa una lista de números separados por comas: ")
+lista_numeros = [int(x) for x in entrada.split(",")]
+
+resultado = suma_pares(lista_numeros)
+print(f"Suma de los números pares: {resultado}")
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
