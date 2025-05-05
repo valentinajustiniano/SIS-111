@@ -1,0 +1,79 @@
+
+#Largest porduct between two numbers
+def Largest_porduct_between_two_numbers(num1, num2, num3, num4):
+    res1 = num1*num2
+    res2 = num1*num3
+    res3 = num1*num4
+
+    res4 = num2*num1
+    res5 = num2*num3
+    res6 = num2*num4
+
+    res7 = num3*num1
+    res8 = num3*num2
+    res9 = num3*num4
+
+    res10 = num4*num1
+    res11 = num4*num2
+    res12 = num4*num3
+
+    producto_mayor = 0
+    if(res1 > res2):
+        producto_mayor = res1
+    else:
+        producto_mayor = res2
+
+
+    if res3 > producto_mayor: producto_mayor = res3
+    #....
+    if res4 > producto_mayor: producto_mayor = res4
+    #....
+    if res5 > producto_mayor: producto_mayor = res5
+    #....
+    if res6 > producto_mayor: producto_mayor = res6
+    #....
+    if res7 > producto_mayor: producto_mayor = res7
+    #....
+    if res8 > producto_mayor: producto_mayor = res8
+    #....
+    if res9 > producto_mayor: producto_mayor = res9
+    #....
+    if res10 > producto_mayor: producto_mayor = res10
+    #....
+    if res11 > producto_mayor: producto_mayor = res11
+    #....
+    if res12 > producto_mayor: producto_mayor = res12
+
+    print("largest product: ", producto_mayor)
+
+    #Llamar a la función Largest_porduct_between_two_number
+    #Largest_porduct_between_two_number(2, 3, 5, 7)
+
+
+def LargestProductBetweenTwoNumbers(num1, num2, num3, num4):
+    #Pedir los cuatros numeros al usuario
+    numeros = []
+    numeros.append(num1)
+    numeros.append(num2)
+    numeros.append(num3)
+    numeros.append(num4)
+
+    #Inicializar el producto maximo 
+    producto_max = numeros[0] * numeros[1]
+
+    #Comparar todos los pares posibles manualmente 
+    for i in range(4):
+        for j in range(i + 1, 4):
+            producto = numeros[i] * numeros[j]
+            if producto > producto_max:
+                producto_max = producto
+
+    print(f"El producto mas garnde entre dos números es: {producto_max}")
+
+LargestProductBetweenTwoNumbers(4, 6, 5, 7)
+   
+ 
+
+
+    
+    
